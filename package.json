@@ -1,0 +1,25 @@
+{
+  "name": "locksmith",
+  "devDependencies": {
+    "browser-sync": "^1.3.7",
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "^1.0.0",
+    "gulp-bower": "0.0.6",
+    "gulp-concat": "^2.4.0",
+    "gulp-connect": "^2.0.6",
+    "gulp-imagemin": "^1.0.1",
+    "gulp-inject": "^1.0.2",
+    "gulp-livereload": "^2.1.1",
+    "gulp-minify-css": "^0.3.8",
+    "gulp-minify-html": "^0.1.5",
+    "gulp-open": "^0.2.8",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.0.1"
+  },
+  "dependencies": {
+    "express": "^4.9.3"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

@@ -1,0 +1,1 @@
+describe("carousel",function(){"use strict";var e,c;beforeEach(module("angular-carousel")),beforeEach(inject(function(r,a){e=r,c=a})),afterEach(function(){e.$destroy()})});

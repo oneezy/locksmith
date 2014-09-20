@@ -1,0 +1,198 @@
+/*
+==========================================================================
+ SETTINGS (Special Classes)
+========================================================================== */
+
+/* Visuals */
+.none { display: none; visibility: hidden; }
+.show { display: block; visibility: static; }
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }
+.hide { opacity: 0; cursor: default; }
+
+/* Borders */
+.border { border: 1px solid #000; }
+.t-border { border-top: 1px solid #000; }
+.r-border { border-right: 1px solid #000; }
+.b-border { border-bottom: 1px solid #000; }
+.l-border { border-left: 1px solid #000; }
+.noborder { border: 0; }
+
+/* Overflow */
+.hidden { overflow: hidden; }
+.visible { overflow: visible; }
+.overflow { overflow: auto; }
+.x-flow { overflow-x: scroll; }
+.y-flow { overflow-y: scroll; }
+
+/* Margin */
+.auto { margin: 0 auto; }
+.margin0 { margin: 0; }
+.margin05 { margin: .5em; }
+.margin1 { margin: 1em; }
+.margin15 { margin: 1.5em; }
+.margin2 { margin: 2em; }
+.margin3 { margin: 3em; }
+.x-margin05 { margin: 0 .5em; }
+.x-margin1 { margin: 0 1em; }
+.x-margin15 { margin: 0 1.5em; }
+.x-margin2 { margin: 0 2em; }
+.x-margin3 { margin: 0 3em; }
+.y-margin05 { margin: .5em 0; }
+.y-margin1 { margin: 1em 0; }
+.y-margin15 { margin: 1.5em 0; }
+.y-margin2 { margin: 2em 0; }
+.y-margin3 { margin: 3em 0; }
+.t-margin05 { margin: .5em 0 0; }
+.t-margin1 { margin: 1em 0 0; }
+.t-margin15 { margin: 1.5em 0 0; }
+.t-margin2 { margin: 2em 0 0; }
+.t-margin3 { margin: 3em 0 0; }
+.r-margin05 { margin: 0 .5em 0 0; }
+.r-margin1 { margin: 0 1em 0 0; }
+.r-margin15 { margin: 0 1.5em 0 0; }
+.r-margin2 { margin: 0 2em 0 0; }
+.r-margin3 { margin: 0 3em 0 0; }
+.b-margin05 { margin: 0 0 .5em; }
+.b-margin1 { margin: 0 0 1em; }
+.b-margin15 { margin: 0 0 1.5em; }
+.b-margin2 { margin: 0 0 2em; }
+.b-margin3 { margin: 0 0 3em; }
+.l-margin05 { margin: 0 0 0 .5em; }
+.l-margin1 { margin: 0 0 0 1em; }
+.l-margin15 { margin: 0 0 0 1.5em; }
+.l-margin2 { margin: 0 0 0 2em; }
+.l-margin3 { margin: 0 0 0 3em; }
+
+/* Padding */
+.padding0 { padding: 0; }
+.padding05 { padding: .5em; }
+.padding1 { padding: 1em; }
+.padding15 { padding: 1.5em; }
+.padding2 { padding: 2em; }
+.padding3 { padding: 3em; }
+.x-padding05 { padding: 0 .5em; }
+.x-padding1 { padding: 0 1em; }
+.x-padding15 { padding: 0 1.5em; }
+.x-padding2 { padding: 0 2em; }
+.x-padding3 { padding: 0 3em; }
+.y-padding05 { padding: .5em 0; }
+.y-padding1 { padding: 1em 0; }
+.y-padding15 { padding: 1.5em 0; }
+.y-padding2 { padding: 2em 0; }
+.y-padding3 { padding: 3em 0; }
+.t-padding05 { padding: .5em 0 0; }
+.t-padding1 { padding: 1em 0 0; }
+.t-padding15 { padding: 1.5em 0 0; }
+.t-padding2 { padding: 2em 0 0; }
+.t-padding3 { padding: 3em 0 0; }
+.r-padding05 { padding: 0 .5em 0 0; }
+.r-padding1 { padding: 0 1em 0 0; }
+.r-padding15 { padding: 0 1.5em 0 0; }
+.r-padding2 { padding: 0 2em 0 0; }
+.r-padding3 { padding: 0 3em 0 0; }
+.b-padding05 { padding: 0 0 .5em; }
+.b-padding1 { padding: 0 0 1em; }
+.b-padding15 { padding: 0 0 1.5em; }
+.b-padding2 { padding: 0 0 2em; }
+.b-padding3 { padding: 0 0 3em; }
+.l-padding05 { padding: 0 0 0 .5em; }
+.l-padding1 { padding: 0 0 0 1em; }
+.l-padding15 { padding: 0 0 0 1.5em; }
+.l-padding2 { padding: 0 0 0 2em; }
+.l-padding3 { padding: 0 0 0 3em; }
+
+/* Position */
+.static { position: static; }
+.relative { position: relative; }
+
+/* Height */
+.height100 { height: 100%; }
+
+/* Backgrounds */
+.red-bg { background: red; }
+.yellow-bg { background: yellow; }
+.lime-bg { background: lime; }
+.darkgray-bg { background: #767676; }
+.gray-bg { background: #cccccc; }
+.silver-bg { background: #f2f2f2; }
+.white-bg { background: #ffffff; }
+.black-bg { background: #000000; }
+.blue-bg { background: #0096d6; }
+.nobg { background: transparent; }
+
+/* Colors */
+.red { color: red; }
+.yellow { color: yellow; }
+.lime { color: lime; }
+.litegray { color: #cccccc; }
+.gray { color: #999999; }
+.darkgray { color: #767676; }
+.darkergray { color: #5a5a5a; }
+.silver { color: #f2f2f2; }
+.white { color: #ffffff; }
+.black { color: #000000; }
+.blue { color: #0096d6; }
+
+/* Lettering */
+.xxsmall { font-size: .65em;}
+.xsmall { font-size: .75em; }
+.small { font-size: .85em; }
+.normal { font-size: 1em; }
+.medium { font-size: 1.25em; }
+.large { font-size: 1.5em; }
+.xlarge { font-size: 2em; }
+.xxlarge { font-size: 2.5em; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.underline { text-decoration: underline;}
+
+/* Displays */
+.table { display: table; }
+.table-cell { display: table-cell; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+.block { display: block; }
+
+/* Cursor */
+.default { cursor: default; }
+.pointer { cursor: pointer; }
+
+/* Design */
+.round { -moz-border-radius: 1em; -webkit-border-radius: 1em; border-radius: 1em; -khtml-border-radius: 1em; }
+.ellipsis { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; box-sizing: border-box; } /* child element has to be inline */
+
+/* Alignment */
+.left { float: left; }
+.right { float: right; }
+.align-left { text-align: left; }
+.align-right { text-align: right; }
+.center { text-align: center; }
+.t-vertical { vertical-align: top; }
+.m-vertical { vertical-align: middle; }
+.b-vertical { vertical-align: bottom; }
+
+/* Word Wrap */
+.wrap { white-space: normal; }
+.nowrap { white-space: nowrap; }
+.break { -ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; }
+
+/* Line Height */
+.line0 { line-height: 0; }
+.line025 { line-height: .25; }
+.line05 { line-height: .5; }
+.line1 { line-height: 1; }
+.line12 { line-height: 1.2; }
+.line14 { line-height: 1.4; }
+.line16 { line-height: 1.6; }
+.line18 { line-height: 1.8; }
+.line2 { line-height: 2; }
+.line25 { line-height: 2.5; }
+.line3 { line-height: 3; }
+
+/* Glyphs */
+.colon:after { content:':'; } 
+.required:after { content:'*'; } 

@@ -1,5 +1,8 @@
 {
   "name": "locksmith",
+  "description": "Austin Texas Locksmiths",
+  "version": "0.0.3",
+  "private": "true",
   "devDependencies": {
     "browser-sync": "^1.3.7",
     "gulp": "^3.8.8",

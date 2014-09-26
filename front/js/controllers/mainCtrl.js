@@ -3,4 +3,4 @@ angular
 	.controller('mainCtrl', ['$scope', 'Page', function($scope, Page) {
 				$scope.Page = Page;
 			}
-	}])
+	}]);

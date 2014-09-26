@@ -4,3 +4,4 @@ angular
 		$scope.title = "Locksmith Services";
 		Page.setTitle('WOO!!!');
 	}]);
+	

@@ -6,6 +6,7 @@ angular
 		'ngAnimate',
 		'angular-carousel'
 	])
+
 	.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function($urlRouterProvider, $stateProvider, $locationProvider) {
 		$urlRouterProvider.otherwise("/");
 
@@ -31,3 +32,11 @@ angular
 		// use the HTML5 History API
 		$locationProvider.html5Mode(true);
 	}])
+
+	.service('Page', function(){
+	  var title = 'default';
+	  return {
+	    title: function() { return title; },
+	    setTitle: function(newTitle) { title = newTitle; }
+	  };
+	});

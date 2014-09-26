@@ -1,5 +1,6 @@
 angular
 	.module('app')
-	.controller('servicesCtrl', ['$scope', function($scope) {
+	.controller('servicesCtrl', ['$scope', 'Page', function($scope, Page) {
 		$scope.title = "Locksmith Services";
+		Page.setTitle('WOO!!!');
 	}]);

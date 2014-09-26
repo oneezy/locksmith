@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="no-js" ng-app="app">
+<html class="no-js" ng-app="app" ng-controller="mainCtrl">
 <head>
-	<title>Austin Texas Locksmith | Austin City Locksmith</title>
+	<title>{{ Page.title() }}</title>
 
 	<!--[if lt IE 9]>
 	<script src="front/js/plugins/html5shiv.min.js"></script>
@@ -45,6 +45,7 @@
 	<script src="js/app.js"></script>
 
 	<!-- Controllers -->
+	<script src="js/controllers/mainCtrl.js"></script>
 	<script src="js/controllers/homeCtrl.js"></script>
 	<script src="js/controllers/servicesCtrl.js"></script>
 

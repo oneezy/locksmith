@@ -1,42 +1,27 @@
+var app = angular.module('plunker', []);
 
-// App Starts
-angular
-	.module('app', [
-		'ui.router',
-		'ngAnimate',
-		'angular-carousel'
-	])
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  $routeProvider.
+    when('/test1', {template: 'page 1', controller: Test1Ctrl}).
+    when('/test2', {template: 'page 2', controller: Test2Ctrl}).
+    otherwise({redirectTo: 'test1'});
+  $locationProvider.html5Mode( true );
+}]);
 
-	.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function($urlRouterProvider, $stateProvider, $locationProvider) {
-		$urlRouterProvider.otherwise("/");
+app.factory('Page', function(){
+  var title = 'default';
+  return {
+    title: function() { return title; },
+    setTitle: function(newTitle) { title = newTitle; }
+  };
+});
 
-		$stateProvider
-			.state('home', {
-				url: '/',
-				templateUrl: 'pages/home.html',
-				controller: 'homeCtrl'
-			})
-			.state('services', {
-				url: '/locksmith-services',
-				templateUrl: 'pages/locksmith-services.html',
-				controller: 'servicesCtrl'
-			})
-			.state('locations', {
-				url: '/locksmith-locations',
-				templateUrl: 'pages/locksmith-locations.html'
-			})
-			.state('payment', {
-				url: '/locksmith-payment',
-				templateUrl: 'pages/locksmith-payment.html'
-			})
-		// use the HTML5 History API
-		$locationProvider.html5Mode(true);
-	}])
-
-	.service('Page', function(){
-	  var title = 'default';
-	  return {
-	    title: function() { return title; },
-	    setTitle: function(newTitle) { title = newTitle; }
-	  };
-	});
+function MainCtrl($scope, Page) {
+  $scope.Page = Page;
+}
+function Test1Ctrl($scope, Page) {
+  Page.setTitle('title1');
+}
+function Test2Ctrl($scope, Page) {
+  Page.setTitle('title2');
+}

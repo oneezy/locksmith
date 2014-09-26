@@ -1,1 +1,0 @@
-!function(){"use strict";angular.module("angular-carousel").filter("carouselSlice",function(){return function(r,u,n){return angular.isArray(r)?r.slice(u,u+n):angular.isObject(r)?r:void 0}})}();

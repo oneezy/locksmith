@@ -6,7 +6,7 @@ angular
 		'ngAnimate',
 		'angular-carousel'
 	])
-	.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
+	.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function($urlRouterProvider, $stateProvider, $locationProvider) {
 		$urlRouterProvider.otherwise("/");
 
 		$stateProvider
@@ -28,4 +28,6 @@ angular
 				url: '/locksmith-payment',
 				templateUrl: 'pages/locksmith-payment.html'
 			})
+		// use the HTML5 History API
+		$locationProvider.html5Mode(true);
 	}])

@@ -31,3 +31,25 @@ angular
 		// use the HTML5 History API
 		$locationProvider.html5Mode(true);
 	}])
+
+
+angular
+  .module('app')
+  .controller('homeCtrl', ['$scope', '$timeout', function($scope, $timeout) {
+      function addSlide() {
+          var i = target.length;
+      };
+
+      function addSlides() {
+          for (var i=0; i < qty; i++) {
+              addSlide(target);
+          }
+      }
+  }])
+
+
+angular
+  .module('app')
+  .controller('servicesCtrl', ['$scope', function($scope) {
+    $scope.title = "Locksmith Services";
+  }]);

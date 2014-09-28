@@ -1,1 +1,1 @@
-angular.module("app").controller("homeCtrl",["$scope","$timeout",function(){}]);
+angular.module("app").controller("homeCtrl",["$scope","$timeout","Page",function(e,t,o){o.setTitle("Austin Texas Locksmith")}]);

@@ -33,9 +33,32 @@ angular
 	}])
 
 
+// Page
 angular
   .module('app')
-  .controller('homeCtrl', ['$scope', '$timeout', function($scope, $timeout) {
+  .factory('Page', function(){
+    var title = 'default';
+    return {
+      title: function() { return title; },
+      setTitle: function(newTitle) { title = newTitle; }
+    };
+  });
+
+
+// Main Control
+angular
+  .module('app')
+  .controller('mainCtrl', ['$scope', 'Page', function($scope, Page) {
+    $scope.Page = Page;
+  }]);
+
+
+// Home
+angular
+  .module('app')
+  .controller('homeCtrl', ['$scope', '$timeout', 'Page', function($scope, $timeout, Page) {
+      Page.setTitle('title1');
+
       function addSlide() {
           var i = target.length;
       };
@@ -48,8 +71,9 @@ angular
   }])
 
 
+// Services
 angular
   .module('app')
-  .controller('servicesCtrl', ['$scope', function($scope) {
-    $scope.title = "Locksmith Services";
+  .controller('servicesCtrl', ['$scope', 'Page', function($scope, Page) {
+    Page.setTitle('title2');
   }]);

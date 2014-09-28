@@ -1,5 +1,6 @@
+// Locations Controller
 angular
 	.module('app')
-	.controller('servicesCtrl', ['$scope', function($scope) {
-		$scope.title = "Locksmith Services";
+	.controller('locationsCtrl', ['$scope', 'Page', function($scope, Page) {
+		Page.setTitle('Austin Texas Locksmith Locations');
 	}]);

@@ -1,5 +1,6 @@
+// Main Control
 angular
 	.module('app')
-	.controller('servicesCtrl', ['$scope', function($scope) {
-		$scope.title = "Locksmith Services";
+	.controller('mainCtrl', ['$scope', 'Page', function($scope, Page) {
+		$scope.Page = Page;
 	}]);

@@ -2,7 +2,7 @@
 body { background: #f2f2f2; }
 header { background: white; width: 100%; float: left; }
 footer { background: green; position: fixed; bottom: 0; right: 0; left: 0; width: 100%; }
-h2 { text-indent: -99999px; position: absolute; top: 0; left: 0; }
+h1,h2 { text-indent: -99999px; position: absolute; top: 0; left: 0; }
 
 header .wrapper { text-align: center; }
 header .wrapper h1 { text-indent: -99999px; position: absolute; top: 0; left: 0; }

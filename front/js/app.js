@@ -22,11 +22,13 @@ angular
 			})
 			.state('locations', {
 				url: '/locksmith-locations',
-				templateUrl: 'pages/locksmith-locations.html'
+				templateUrl: 'pages/locksmith-locations.html',
+        controller: 'locationsCtrl'
 			})
 			.state('payment', {
 				url: '/locksmith-payment',
-				templateUrl: 'pages/locksmith-payment.html'
+				templateUrl: 'pages/locksmith-payment.html',
+        controller: 'paymentCtrl'
 			})
 		// use the HTML5 History API
 		$locationProvider.html5Mode(true);
@@ -57,7 +59,7 @@ angular
 angular
   .module('app')
   .controller('homeCtrl', ['$scope', '$timeout', 'Page', function($scope, $timeout, Page) {
-      Page.setTitle('title1');
+      Page.setTitle('Austin Texas Locksmith');
 
       function addSlide() {
           var i = target.length;
@@ -75,5 +77,21 @@ angular
 angular
   .module('app')
   .controller('servicesCtrl', ['$scope', 'Page', function($scope, Page) {
-    Page.setTitle('title2');
+    Page.setTitle('Austin Texas Locksmith Services');
+  }]);
+
+
+// Locations
+angular
+  .module('app')
+  .controller('locationsCtrl', ['$scope', 'Page', function($scope, Page) {
+    Page.setTitle('Austin Texas Locksmith Locations');
+  }]);
+
+
+// Payment
+angular
+  .module('app')
+  .controller('paymentCtrl', ['$scope', 'Page', function($scope, Page) {
+    Page.setTitle('Austin Texas Locksmith Payment');
   }]);

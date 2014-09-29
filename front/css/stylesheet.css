@@ -87,7 +87,7 @@ box-shadow: 0 0 50px 4px rgba(255, 255, 255, 1);
 
 .texas li a { text-indent: -99999px; background: silver !important; width: 15px; height: 15px; border-radius: 20px; border: 2px solid black; padding: 0; margin: 0; }
 .texas li a.active { background: red !important; border: 2px solid black; }
-.texas li a:before { background: none; }
+.texas li a:before { background: none !important; }
 
 /* variables */
 /* general */

@@ -1,5 +1,5 @@
 var gulp          = require ('gulp'),
-    sync          = require('browser-sync'),
+    sync          = require ('browser-sync'),
     bower         = require ('gulp-bower'),
     htmlify       = require ('gulp-minify-html'),
     uglify        = require ('gulp-uglify'),
@@ -12,7 +12,7 @@ var gulp          = require ('gulp'),
     connect       = require ('gulp-connect'),
     open          = require ('gulp-open');
 
-// Bower Task 
+// Bower Task
 gulp.task('bower', function() {
     return bower()
       .pipe(gulp.dest('front/js/vendors'));
@@ -21,7 +21,7 @@ gulp.task('bower', function() {
 // HTML Task
 gulp.task('html', function(){
     gulp.src('front/**/*.html')
-//      .pipe(htmlify())
+//    .pipe(htmlify())
       .on('error', console.error.bind(console))
       .pipe(gulp.dest('build'))
       .pipe(connect.reload());
@@ -30,13 +30,13 @@ gulp.task('html', function(){
 // Styles Task (Uglifies)
 gulp.task('styles', function(){
     gulp.src('front/**/*.css')
-//      .pipe(prefix('last 2 versions'))
+//    .pipe(prefix('last 2 versions'))
       .pipe(minify())
-//      .pipe(concat('css/css'))
-//      .pipe(rename({
-//          suffix: ".min",
-//          extname: ".css"
-//      }))
+//    .pipe(concat('css/css'))
+//    .pipe(rename({
+//        suffix: ".min",
+//        extname: ".css"
+//    }))
       .on('error', console.error.bind(console))
       .pipe(gulp.dest('build'))
       .pipe(connect.reload());
@@ -46,14 +46,14 @@ gulp.task('styles', function(){
 gulp.task('scripts', function(){
     gulp.src('front/**/*.js')
       .pipe(uglify())
-//      .pipe(concat('js/main'))
-//      .pipe(rename({
-//         suffix: ".min",
-//         extname: ".js"
-//      }))
+//    .pipe(concat('js/main'))
+//    .pipe(rename({
+//       suffix: ".min",
+//       extname: ".js"
+//    }))
       .on('error', console.error.bind(console))
       .pipe(gulp.dest('build'))
-      .pipe(connect.reload());  
+      .pipe(connect.reload());
 });
 
 // Image Task (compress)

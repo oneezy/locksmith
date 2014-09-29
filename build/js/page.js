@@ -1,1 +1,1 @@
-angular.module("app").factory("Page",function(){var t="default";return{title:function(){return t},setTitle:function(n){t=n}}});
+angular.module("app").service("Page",function(){var t="Austin Texas Locksmith",n="default";return{title:function(){return t},setTitle:function(n){t=n},description:function(){return n},setDescription:function(t){n=t}}});

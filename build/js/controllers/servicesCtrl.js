@@ -1,1 +1,1 @@
-angular.module("app").controller("servicesCtrl",["$scope","Page",function(e,s){s.setTitle("Austin Texas Locksmith Services")}]);
+angular.module("app").controller("servicesCtrl",["$scope","Page",function(e,s){s.setTitle("Austin Texas Locksmith Services"),s.setDescription("Services! Services! Services!")}]);

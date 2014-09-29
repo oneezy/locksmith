@@ -1,0 +1,1 @@
+angular.module("app").controller("austinCtrl",["$scope","Page",function(e,a){a.setTitle("Austin Texas Locksmith")}]),angular.module("app").controller("budaCtrl",["$scope","Page",function(e,a){a.setTitle("Buda Texas Locksmith")}]),angular.module("app").controller("cedarparkCtrl",["$scope","Page",function(e,a){a.setTitle("Cedar Park Texas Locksmith")}]);

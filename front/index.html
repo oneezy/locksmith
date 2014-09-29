@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" ng-app="app" ng-controller="mainCtrl">
 <head>
-	<title ng-bind="Page.title()"></title>
+	<title ng-bind="Page.title() + ' | 1(800)777-7777'"></title>
 
 	<!--[if lt IE 9]>
 	<script src="front/js/plugins/html5shiv.min.js"></script>
@@ -29,12 +29,11 @@
 </head>
 
 <body>
-
-    <div class="page row">
-        <header ng-include="'pages/_header.html'"></header>
-        <section class="row main" ui-view></section>
-        <footer class="row" ng-include="'pages/_footer.html'"></footer>
-    </div>
+  <div class="page row">
+      <header ng-include="'pages/_header.html'"></header>
+      <section class="row main" ui-view></section>
+      <footer class="row" ng-include="'pages/_footer.html'"></footer>
+  </div>
 
 	<!-- Javascript -->
 	<script src="js/vendors/angular/angular.min.js"></script>
@@ -50,9 +49,8 @@
 	<!-- Controllers -->
   <script src="js/controllers/mainCtrl.js"></script>
 	<script src="js/controllers/homeCtrl.js"></script>
-  <script src="js/controllers/servicesCtrl.js"></script>
-  <script src="js/controllers/locationsCtrl.js"></script>
-  <script src="js/controllers/paymentCtrl.js"></script>
+  <script src="js/controllers/navigationCtrl.js"></script>
+	<script src="js/controllers/locationCtrl.js"></script>
 
 
 </body>

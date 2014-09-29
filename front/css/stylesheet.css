@@ -23,7 +23,16 @@ header .wrapper h1 { text-indent: -99999px; position: absolute; top: 0; left: 0;
 .checklist li { position: relative; padding: .5rem 0 0 2.5rem; margin: 0 0 .5rem; font-size: .9rem; font-weight: bold; }
 .checklist li:before { content: " "; background: url("../images/sprites.png") no-repeat -19px 0; width: 31px; height: 31px; position: absolute; left: 0; top: 0; }
 
-.call:before { content: " "; background: url("../images/sprites.png") no-repeat 0 -58px; position: absolute; right: 0; bottom: 0; width: 126px; height: 155px; }
+.row.locations li { float: left; width: 50%; display: block; }
+.locations { list-style: none; padding: .5rem; }
+.locations li a { color: black; cursor: pointer; float: left; width: 100%; display: block; position: relative; padding: .5rem 0 0 2.5rem; margin: 0 0 .5rem; font-size: .9rem; font-weight: bold; }
+.locations li a:before { content: " "; background: url("../images/sprites.png") no-repeat -95px 0; width: 31px; height: 30px; position: absolute; left: 0; top: 0; }
+.locations li a:hover:before { content: " "; background: url("../images/sprites.png") no-repeat -95px -30px; width: 31px; height: 30px; position: absolute; left: 0; top: 0; }
+
+/* Location pages */
+.locations li a.active { color: red; }
+
+.call:before { content: " "; background: url("../images/sprites.png") no-repeat 0 -60px; position: absolute; right: 0; bottom: 0; width: 126px; height: 129px; }
 .call {
 	-moz-box-shadow:inset 0px 3px 0px 0px #dbf4da;
 	-webkit-box-shadow:inset 0px 3px 0px 0px #dbf4da;
@@ -40,15 +49,32 @@ header .wrapper h1 { text-indent: -99999px; position: absolute; top: 0; left: 0;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:arial;
-	font-size: 1.75rem;
+	font-family: arial;
+	font-size: 1.6rem;
 	padding: 1rem;
 	font-weight:bold;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #000000;
-	text-align: center;
+	text-align: left;
 	width: 100%;
 	position: relative;
+	letter-spacing: -2px;
+}
+.call i { position: absolute; top: -21px; font-size: .75em; font-family: "arial black"; letter-spacing: 0; color: #e1e1e1; text-shadow: none; }
+.call b { content:" "; width: 2px; display: inline-block; border-left: 1px solid black; border-right: 1px solid #4edd4e;; }
+.call span { color: black; text-shadow:1px 1px 0px #4edd4e; }
+
+/* 24/7 Support Animation */
+.call i {
+-webkit-animation-name: slideSupport;
+-webkit-animation-iteration-count: once;
+-webkit-animation-timing-function: ease-in;
+-webkit-animation-duration: .6s;
+}
+
+@-webkit-keyframes slideSupport {
+		0% { -webkit-transform: translateX(-100%); opacity: 0;  }
+		100% { -webkit-transform: translateX(0); opacity: 1; }
 }
 
 footer {
@@ -57,6 +83,11 @@ footer {
 box-shadow: 0 0 50px 4px rgba(255, 255, 255, 1);
 }
 
+.texas { background: url("../images/texas.svg") no-repeat 50% 50%; position: fixed; top: 160px; right: 0; bottom: 50px; left: 0; }
+
+.texas li a { text-indent: -99999px; background: silver !important; width: 15px; height: 15px; border-radius: 20px; border: 2px solid black; padding: 0; margin: 0; }
+.texas li a.active { background: red !important; border: 2px solid black; }
+.texas li a:before { background: none; }
 
 /* variables */
 /* general */

@@ -1,6 +1,6 @@
 /* Stylesheet */
 body { background: #f2f2f2; }
-header { background: white; width: 100%; float: left; }
+header { background: white; width: 100%; float: left; position: relative; z-index: 1; }
 footer { background: green; position: fixed; bottom: 0; right: 0; left: 0; width: 100%; }
 h1,h2 { text-indent: -99999px; position: absolute; top: 0; left: 0; }
 
@@ -34,9 +34,9 @@ header .wrapper h1 { text-indent: -99999px; position: absolute; top: 0; left: 0;
 
 .call:before { content: " "; background: url("../images/sprites.png") no-repeat 0 -60px; position: absolute; right: 0; bottom: 0; width: 126px; height: 129px; }
 .call {
-	-moz-box-shadow:inset 0px 3px 0px 0px #dbf4da;
-	-webkit-box-shadow:inset 0px 3px 0px 0px #dbf4da;
-	box-shadow:inset 0px 3px 0px 0px #dbf4da;
+	-moz-box-shadow:inset 0px 3px 0px 0px #a6ffa1;
+	-webkit-box-shadow:inset 0px 3px 0px 0px #a6ffa1;
+	box-shadow:inset 0px 3px 0px 0px #a6ffa1;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4edd4e), color-stop(1, #206321));
 	background:-moz-linear-gradient(top, #4edd4e 5%, #206321 100%);
 	background:-webkit-linear-gradient(top, #4edd4e 5%, #206321 100%);
@@ -45,16 +45,16 @@ header .wrapper h1 { text-indent: -99999px; position: absolute; top: 0; left: 0;
 	background:linear-gradient(to bottom, #4edd4e 5%, #206321 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4edd4e', endColorstr='#206321',GradientType=0);
 	background-color:#4edd4e;
-	border-top:1px solid #206321;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
+	border-top: 1px solid #206321;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
 	font-family: arial;
 	font-size: 1.6rem;
 	padding: 1rem;
-	font-weight:bold;
-	text-decoration:none;
-	text-shadow:1px 1px 0px #000000;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #000000;
 	text-align: left;
 	width: 100%;
 	position: relative;
@@ -83,12 +83,42 @@ footer {
 box-shadow: 0 0 50px 4px rgba(255, 255, 255, 1);
 }
 
-.texas { background: url("../images/texas.svg") no-repeat 50% 50%; position: fixed; top: 160px; right: 0; bottom: 50px; left: 0; }
+.texas { background: url("../images/texas.svg") no-repeat 50% 50%; position: fixed; top: -50%; left: -110%; z-index: -1; height: 190%; width: 190%;
 
-.texas li a { text-indent: -99999px; background: silver !important; width: 15px; height: 15px; border-radius: 20px; border: 2px solid black; padding: 0; margin: 0; }
-.texas li a.active { background: red !important; border: 2px solid black; }
-.texas li a:before { background: none !important; }
+	-webkit-animation-name: slideTexas;
+	-webkit-animation-iteration-count: once;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-duration: 2.5s;
 
+}
+
+@-webkit-keyframes slideTexas {
+		0% { -webkit-transform: translateX(70%); opacity: 0; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; }
+		40% { opacity: 1; }
+		60% { -webkit-transform: translateX(-100%); opacity: 1; top: 165px; bottom: 69px; left: 0; }
+		100% { -webkit-transform: translateX(0); top: -50%; left: -110%; z-index: -1; height: 190%; width: 190%; }
+}
+
+.texas .location-wrapper { margin: 0; padding: 0; height: 100%; width: 100%; position: relative; }
+.texas .location-wrapper .locations { position: absolute; top: 43%; right: 30%; width: 100px; height: 100px; background: lime;
+
+	-webkit-animation-name: showLocations;
+	-webkit-animation-iteration-count: once;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-duration: 3.3s;
+
+}
+
+@-webkit-keyframes showLocations {
+		0% { opacity: 0; }
+		92% { opacity: 0; }
+		100% { opacity: 1; }
+}
+
+.texas .location-wrapper .locations li { float: none; width: auto; }
+.texas .location-wrapper .locations li a { text-indent: -99999px; background: silver !important; width: 15px; height: 15px; border-radius: 20px; border: 2px solid black; padding: 0; margin: 0; }
+.texas .location-wrapper .locations li a.active { background: red !important; border: 2px solid black; }
+.texas .location-wrapper .locations li a:before { background: none !important; }
 /* variables */
 /* general */
 .rn-carousel-container { overflow: hidden; position: relative;

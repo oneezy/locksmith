@@ -9,7 +9,7 @@
     app.use('/pages', express.static(__dirname + '/front/pages'));
 
     app.all('/*', function(req, res, next) {
-      
+
         // Sends the index.html for other files to support HTML5Mode
         res.sendFile('/front/index.html', { root: __dirname });
     });

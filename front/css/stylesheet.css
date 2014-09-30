@@ -83,24 +83,29 @@ footer {
 box-shadow: 0 0 50px 4px rgba(255, 255, 255, 1);
 }
 
-.texas { background: url("../images/texas.svg") no-repeat 50% 50%; position: fixed; top: -50%; left: -110%; z-index: -1; height: 190%; width: 190%;
+.texas { background: url("../images/texas.svg") no-repeat 50% 50%; position: fixed; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; -webkit-transform: scale(7,7);
 
-	-webkit-animation-name: slideTexas;
+	-webkit-animation-name: zoomTexas;
 	-webkit-animation-iteration-count: once;
 	-webkit-animation-timing-function: ease-in;
 	-webkit-animation-duration: 2.5s;
 
 }
 
-@-webkit-keyframes slideTexas {
-		0% { -webkit-transform: translateX(10%); opacity: 0; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; }
-		40% { opacity: 1; }
-		60% { -webkit-transform: translateX(-100%); opacity: 1; top: 165px; bottom: 69px; left: 0; }
-		100% { -webkit-transform: translateX(0); top: -50%; left: -110%; z-index: -1; height: 190%; width: 190%; }
+@-webkit-keyframes zoomTexas {
+		0% { -webkit-transform: scale(.75,.75); opacity: 0; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; }
+		10% { opacity: 1; }
+		90% { -webkit-transform: scale(1,1); opacity: 1; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; }
+ 		100% { -webkit-transform: scale(7,7); opacity: 1; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; }
 }
 
-.texas .location-wrapper { margin: 0; padding: 0; height: 100%; width: 100%; position: relative; }
-.texas .location-wrapper .locations { position: absolute; top: 43%; right: 30%; width: 100px; height: 100px; background: lime;
+.landingpage { position: fixed; top: 165px; bottom: 69px; left: 0; width: 100%; z-index: -2; }
+.landingpage .location-wrapper { margin: 0; padding: 0; height: 100%; width: 100%; position: relative;
+	-webkit-box-shadow: inset 0 0 200px 50px #ccc;
+	box-shadow: inset 0 0 200px 50px #000000;
+	background: #f2f2f2;
+}
+.landingpage .location-wrapper .locations { position: absolute; top: 43%; right: 30%; width: 100px; height: 100px; background: lime;
 
 	-webkit-animation-name: showLocations;
 	-webkit-animation-iteration-count: once;
@@ -115,10 +120,10 @@ box-shadow: 0 0 50px 4px rgba(255, 255, 255, 1);
 		100% { opacity: 1; }
 }
 
-.texas .location-wrapper .locations li { float: none; width: auto; }
-.texas .location-wrapper .locations li a { text-indent: -99999px; background: silver !important; width: 15px; height: 15px; border-radius: 20px; border: 2px solid black; padding: 0; margin: 0; }
-.texas .location-wrapper .locations li a.active { background: red !important; border: 2px solid black; }
-.texas .location-wrapper .locations li a:before { background: none !important; }
+.landingpage .location-wrapper .locations li { float: none; width: auto; }
+.landingpage .location-wrapper .locations li a { text-indent: -99999px; background: silver !important; width: 15px; height: 15px; border-radius: 20px; border: 2px solid black; padding: 0; margin: 0; }
+.landingpage .location-wrapper .locations li a.active { background: red !important; border: 2px solid black; }
+.landingpage .location-wrapper .locations li a:before { background: none !important; }
 /* variables */
 /* general */
 .rn-carousel-container { overflow: hidden; position: relative;
@@ -159,5 +164,3 @@ backface-visibility: hidden; }
 .rn-carousel-control.rn-carousel-control-prev:before { content: "<"; }
 .rn-carousel-control.rn-carousel-control-next { right: 0.5em; }
 .rn-carousel-control.rn-carousel-control-next:before { content: ">"; }
-
-.test { color: blue; }

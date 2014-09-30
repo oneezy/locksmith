@@ -83,7 +83,7 @@ footer {
 box-shadow: 0 0 50px 4px rgba(255, 255, 255, 1);
 }
 
-.texas { background: url("../images/texas.svg") no-repeat 50% 50%; position: fixed; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; -webkit-transform: scale(7,7);
+.texas { background: url("../images/texas.svg") no-repeat 50% 50%; z-index: 0; position: fixed; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; -webkit-transform: scale(7,7);
 
 	-webkit-animation-name: zoomTexas;
 	-webkit-animation-iteration-count: once;
@@ -93,37 +93,49 @@ box-shadow: 0 0 50px 4px rgba(255, 255, 255, 1);
 }
 
 @-webkit-keyframes zoomTexas {
-		0% { -webkit-transform: scale(.75,.75); opacity: 0; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; }
-		10% { opacity: 1; }
-		90% { -webkit-transform: scale(1,1); opacity: 1; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; }
- 		100% { -webkit-transform: scale(7,7); opacity: 1; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; }
+		0% { z-index: 2; -webkit-transform: scale(.75,.75); opacity: 0; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; }
+		10% { z-index: 2; opacity: 1; }
+		90% { z-index: 2; -webkit-transform: scale(1,1); opacity: 1; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; }
+ 		100% { z-index: 2; -webkit-transform: scale(7,7); opacity: 1; top: 165px; bottom: 69px; left: 0; width: 100%; height: auto; }
 }
 
-.landingpage { position: fixed; top: 165px; bottom: 69px; left: 0; width: 100%; z-index: -2; }
-.landingpage .location-wrapper { margin: 0; padding: 0; height: 100%; width: 100%; position: relative;
-	-webkit-box-shadow: inset 0 0 200px 50px #ccc;
-	box-shadow: inset 0 0 200px 50px #000000;
-	background: #f2f2f2;
+.landingpage { position: fixed; top: 165px; bottom: 69px; left: 0; width: 100%; z-index: 1; }
+.landingpage .map { margin: 0; padding: 0; height: 100%; width: 100%; position: relative; }
+.blur { display: none; -webkit-box-shadow:inset 0 0 60px 30px #ccc; box-shadow: inset 0 0 60px 30px #ccc; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; }
+.landingpage .blur { display: block;
+
+	-webkit-animation-name: showBlur;
+	-webkit-animation-iteration-count: once;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-duration: 3s;
+
 }
-.landingpage .location-wrapper .locations { position: absolute; top: 43%; right: 30%; width: 100px; height: 100px; background: lime;
+
+@-webkit-keyframes showBlur {
+		0% { opacity: 0; }
+		95% { opacity: 0; }
+		100% { opacity: 1; }
+}
+
+.landingpage .map .locations { box-shadow:inset 0 0 50px 60px #C94AFF; background: url("../images/map-points.png") no-repeat 50% 50%; z-index: 0; padding: 0; position: absolute; top: 50%; left: 50%; margin: -368px 0 0 -532px; width: 1065px; height: 736px;
 
 	-webkit-animation-name: showLocations;
 	-webkit-animation-iteration-count: once;
 	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-duration: 3.3s;
+	-webkit-animation-duration: 3s;
 
 }
 
 @-webkit-keyframes showLocations {
-		0% { opacity: 0; }
-		92% { opacity: 0; }
-		100% { opacity: 1; }
+		0% { -webkit-transform: scale(.3,.3); opacity: 0; }
+		95% { -webkit-transform: scale(.5,.5); opacity: 0; }
+		100% { -webkit-transform: scale(1,1); opacity: 1; }
 }
 
-.landingpage .location-wrapper .locations li { float: none; width: auto; }
-.landingpage .location-wrapper .locations li a { text-indent: -99999px; background: silver !important; width: 15px; height: 15px; border-radius: 20px; border: 2px solid black; padding: 0; margin: 0; }
-.landingpage .location-wrapper .locations li a.active { background: red !important; border: 2px solid black; }
-.landingpage .location-wrapper .locations li a:before { background: none !important; }
+.landingpage .map .locations li { float: none; width: auto; }
+.landingpage .map .locations li a { text-indent: -99999px; background: silver !important; width: 15px; height: 15px; border-radius: 20px; border: 2px solid black; padding: 0; margin: 0; }
+.landingpage .map .locations li a.active { background: red !important; border: 2px solid black; }
+.landingpage .map .locations li a:before { background: none !important; }
 /* variables */
 /* general */
 .rn-carousel-container { overflow: hidden; position: relative;

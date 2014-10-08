@@ -2,6 +2,7 @@
 angular
 	.module('app')
 	.controller('homeCtrl', ['$scope', '$timeout', 'Page', function($scope, $timeout, Page) {
+//			Page.setTitle('Austin Texas Locksmith');
 
 			function addSlide() {
 					var i = target.length;

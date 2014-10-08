@@ -117,7 +117,7 @@ box-shadow: 0 0 50px 4px rgba(255, 255, 255, 1);
 		100% { opacity: 1; }
 }
 
-.landingpage .map .locations { box-shadow:inset 0 0 50px 60px #C94AFF; background: url("../images/map-points.png") no-repeat 50% 50%; z-index: 0; padding: 0; position: absolute; top: 50%; left: 50%; margin: -368px 0 0 -532px; width: 1065px; height: 736px;
+.landingpage .map .locations { box-shadow:inset 0 0 50px 60px #ccc; background: url("../images/map-points.png") no-repeat 50% 50%; z-index: 0; padding: 0; position: absolute; top: 50%; left: 50%; margin: -368px 0 0 -532px; width: 1065px; height: 736px;
 
 	-webkit-animation-name: showLocations;
 	-webkit-animation-iteration-count: once;

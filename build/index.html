@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html class="no-js" ng-app="app" ng-controller="mainCtrl">
 <head>
-	<meta name="google-site-verification" content="ZtHvfTud1zMlUp1UgSZhqnDcNIyHCakOhR-m6YJ_fZ0" />
-	<title ng-bind="Page.title() + ' | 1(800)777-7777'"></title>
+	<title ng-bind="Page.title() + ' | 1(512)387-4512'"></title>
 
-	<!--[if lt IE 9]>
-	<script src="front/js/plugins/html5shiv.min.js"></script>
-	<![endif]-->
-
-	<meta charset="utf-8"/>
+	<!-- Search Engines -->
 	<meta name="description" content="{{ Page.description() }}"/>
+	<meta charset="utf-8"/>
+	<link rel="canonical" href="http://austintexaslocksmiths.com">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<!-- Icons -->
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
@@ -26,6 +25,10 @@
 	<link href="css/tablet.css" type="text/css" rel="stylesheet" media="screen and (min-width: 48.063em) and (max-width: 64em)" /> <!-- 769px to 1024px -->
   <link href="css/screen.css" type="text/css" rel="stylesheet" media="only screen and (min-width: 64.063em)" /> <!-- 1025px and up -->
 
+	<!--[if lt IE 9]>
+	<script src="front/js/plugins/html5shiv.min.js"></script>
+	<![endif]-->
+
 	<base href="/"></base>
 </head>
 
@@ -36,12 +39,16 @@
       <footer class="row" ng-include="'pages/_footer.html'"></footer>
   </div>
 
-	<!-- Javascript -->
+	<!-- Vendors -->
 	<script src="js/vendors/angular/angular.min.js"></script>
 	<script src="js/vendors/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="js/vendors/angular-animate/angular-animate.min.js"></script>
 	<script src="js/vendors/angular-touch/angular-touch.min.js"></script>
 	<script src="js/vendors/angular-carousel/dist/angular-carousel.min.js"></script>
+
+	<!-- Plugins -->
+
+	<!-- Main Application -->
 	<script src="js/app.js"></script>
 
   <!-- Pages -->
@@ -53,7 +60,17 @@
   <script src="js/controllers/navigationCtrl.js"></script>
 	<script src="js/controllers/locationCtrl.js"></script>
 
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+	  ga('create', 'UA-55515821-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 </body>
 
 </html>

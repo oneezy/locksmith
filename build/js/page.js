@@ -1,1 +1,1 @@
-angular.module("app").service("Page",function(){var t="Austin Texas Locksmith",n="default";return{title:function(){return t},setTitle:function(n){t=n},description:function(){return n},setDescription:function(t){n=t}}});
+angular.module("app").service("Page",function(){var e="24/7 Austin Locksmiths, Super fast!",t="We provide Fast & Reliable locksmith services to over 20+ locations in the Austin, Tx area. Give us a call | 1(512)387-4512";return{title:function(){return e},setTitle:function(t){e=t},description:function(){return t},setDescription:function(e){t=e}}});
